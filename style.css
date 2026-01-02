@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.summary div {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.income {
+  border-left: 5px solid #2ecc71;
+}
+
+.expense {
+  border-left: 5px solid #e74c3c;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #185a9d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.list li {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #e74c3c;
+}
+
+.delete-btn {
+  background: crimson;
+  border: none;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.theme-btn {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+body.dark input,
+body.dark select {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .summary div,
+body.dark .list li {
+  background: #333;
+}
+.controls input,
+.controls select {
+  width: 100%;
+  padding: 7px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.actions .danger {
+  background: crimson;
+}
